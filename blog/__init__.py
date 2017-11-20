@@ -1,6 +1,3 @@
 from .views import app
-from .models import graph
-
-graph.schema.create_uniqueness_constraint("User", "username")
-graph.schema.create_uniqueness_constraint("Tag", "name")
-graph.schema.create_uniqueness_constraint("Post", "id")
+from .models import jp_graph
+from py2neo.database.status import GraphError
